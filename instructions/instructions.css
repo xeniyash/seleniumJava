@@ -1,0 +1,10 @@
+#header {
+	background-image : url("logo.png");
+}
+
+div {
+	margin-top : 50px;
+	margin-left : auto;
+	margin-right : auto;
+	width : 1000px;
+}

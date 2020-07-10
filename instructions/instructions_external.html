@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>CSE Automation Technical Test Instructions</title>
+		<link rel="stylesheet" type="text/css" href="instructions.css" />
+	</head>
+	<body>
+		<div><img src="logo.png"></div>
+		<div><h1>Automation Technical Test Instructions</h1></div>
+		<div>Hello, welcome to CSE.</div>
+		<div>As part of the Automation Developer candidate selection process, we are asking you to complete a Java/Selenium programming challenge to demonstrate your technical abilities.</div>
+		<div>Please download the Selenium driver of your choice and add it to the project under the Drivers directory.  This is the URL for Chromedriver: <a href="http://chromedriver.storage.googleapis.com/index.html">http://chromedriver.storage.googleapis.com/index.html</a></div>
+		<div>
+			Here are the next steps:
+			<ul>
+				<li>Create a folder with your name inside this project.  All classes and files you create for this test should go into this folder.  Feel free to make as many sub-folders, classes and files as you need.</li>
+				<li>Create a Java program to automate the SoftSlate Store Demo website.  The site is here: <a href="http://www.softslate.com/demo/page/welcome">http://www.softslate.com/demo/page/welcome</a></li>
+				<li>Test Data will come from the testcases/TestCaseInput.txt file, the format is: <code>Test Case Name,Year,Item Description Search,Price Search</code></li>
+				<li>For each run create a new log file.  Report any errors and exceptions to the log file with a timestamp.</li>
+				<li>The workflow for the test we will need to execute is as follows:</li>
+				<ol>
+					
+					<li>Open the browser and navigate to the SoftSlate Store.</li>
+					<li>Click the Categories 'Images by Year' link on the welcome page.</li>
+					<li>Click the 'Images from XXXX' Subcategories link, where the Year is given in the Test Case Input file.  Assume that Year is mandatory and will always be provided in the file.</li>
+					<li>Search for the first item that matches the Name and Price given in the Test Case Input file, and get the Page, Table Row and Column.  <b>For bonus get all the valid matches.</b></li>
+					<li><b>For bonus do not click [View All], search for the matches on each page and also report the Page that matches were found on.</b></li>
+					<li>For each Test Case, print a single row in the log file showing the Page, Table Row and Column that the matching item(s) were found.</li>
+					<ul>
+						<li><u>Example test case:</u> <code>TestCase1,1993,Hubble Finds,</code></li>
+						<li><u>Example log report:</u> <code>Item found on Page 1 at Row[1] Column[2], Page 2 at Row[2] Column[1]</code></li>
+						<li><b>Bonus for extra information in log report</b></li>
+					</ul>
+				</ol>
+				<li>The Name can contain partial matches (i.e. "Hubble finds").  <b>For bonus, allow the tester to input regular expressions into the Test Case Input file (i.e. "H[a-zA-Z]*\s+finds.*").</b></li>
+				<li>Price can be in dollars (102), or standard currency format (102.00)</li>
+				<li>Name and Price can be blank, in which case they can match any values</li>
+			</ul>
+		</div>
+	</body>
+</html>
